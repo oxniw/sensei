@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p{
+            font-family: 'Sacramento', cursive;
+            color: rgb(124, 49, 49);
+        }
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            display: flex;
+            align-items: center;
+            cursor: none;
+            min-height: 100vh;
+            justify-content: center;
+            background: linear-gradient(-45deg,#A79277,#EAD8C0,#D1BB9E,#A79277);
+            background-size: 300% 300%;
+            animation: colors 3s ease-in-out infinite;
+            
+        }
+        .bos{
+            margin: 0;
+            padding: 0;
+            position: absolute;
+            width: 50%;
+            height: 20%;
+            right: 1%;
+            top: -5%;
+        }
+        .element1{
+            position: absolute;
+            justify-content: center;
+            top: 50%;
+            right: 0%;
+            font-size: 120%;
+
+        }
+        .element2{
+            position: absolute;
+            justify-content: center;
+            top: 50%;
+            right: 30%;
+            font-size: 120%;
+            
+        }
+        .element3{
+            position: absolute;
+            justify-content: center;
+            top: 50%;
+            right: 60%;
+            font-size: 120%;
+        }
+        .element4{
+            position: absolute;
+            justify-content: center;
+            top: 50%;
+            right: 90%;
+            font-size: 120%;
+        }
+        .bos1{
+            margin: 0;
+            padding: 0;
+            position: absolute;
+            width: 30%;
+            height: 80%;
+            right: 60%;
+            top: -5%;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .type1{
+            position: absolute;
+            justify-content: center;
+            top: 50%;
+            right: 0%;
+            font-size: 120%;
+            flex-basis: 200;
+            flex-grow: 1;
+        }
+        .cursor{
+            width: 20px;
+            height: 20px;
+            border: 1px solid white;
+            border-radius: 50%;
+            position: absolute;
+        }
+        @keyframes colors{
+            0%{
+                background-position: 0 50%;
+            }
+            50%{
+                background-position: 100% 50%;
+            }
+            100%{
+                background-position: 0 50%;
+            }
+        }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const links = document.querySelectorAll("a");
+            const body = document.body;
+            const cursor = document.querySelector(".cursor");
+            links.forEach(link => {
+                link.addEventListener('mouseenter', function() {
+                    body.classList.add('hidden-cursor');
+                });
+                link.addEventListener('mouseleave', function() {
+                    body.classList.remove('hidden-cursor');
+                });
+            });
+            document.addEventListener('mousemove', e => {
+                cursor.style.top = e.pageY - 10 + "px";
+                cursor.style.left = e.pageX - 10 + "px";
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="cursor"></div>
+    <P style="font-size: 200%; position: relative;">ONXIW</P>
+    <div class="bos">
+        <div class="element1">
+            <a href="http://127.0.0.1:5500/test.html" style="color: rgb(124, 49, 49); font-family:Arial, Helvetica, sans-serif;"></a>
+        </div>
+        <div class="element2">
+            <a href="http://127.0.0.1:5500/test.html" style="color: rgb(124, 49, 49); font-family:Arial, Helvetica, sans-serif;"></a>
+        </div>
+        <div class="element3">
+            <a href="https://oxniw.github.io/web/index9" style="color: rgb(124, 49, 49); font-family:Arial, Helvetica, sans-serif;">collection</a>
+        </div>
+        <div class="element4">
+            <a href="http://127.0.0.1:5500/test.html" style="color: rgb(124, 49, 49); font-family:Arial, Helvetica, sans-serif;"></a>
+        </div>
+    </div>
+</body>
+</html>
